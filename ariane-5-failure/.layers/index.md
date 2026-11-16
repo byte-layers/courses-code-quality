@@ -73,41 +73,41 @@ submitMode: last-only
 questions:
   - prompt: Qu'est-ce qui a déclenché l'erreur dans la centrale inertielle ?
     answers:
-      - "Une panne électrique de la centrale de secours"
       - "La conversion d'une valeur flottante sur 64 bits, trop grande pour un entier signé sur 16 bits"
+      - "Une panne électrique de la centrale de secours"
       - "Un virus introduit dans le logiciel de vol"
       - "Une erreur de saisie de la trajectoire par un opérateur"
-    correct: 2
+    correct: 1
     explanation: |
       La valeur BH, liée à la vitesse horizontale, dépassait ce qu'un entier de 16 bits peut
       contenir. La conversion n'était pas protégée.
   - prompt: Pourquoi la centrale de secours n'a-t-elle servi à rien ?
     answers:
       - "Elle n'était pas branchée"
-      - "Elle faisait tourner le même logiciel, et a rencontré la même erreur"
       - "Elle a été désactivée par l'équipe au sol"
       - "Elle n'existait pas sur Ariane 5"
-    correct: 2
+      - "Elle faisait tourner le même logiciel, et a rencontré la même erreur"
+    correct: 4
     explanation: |
       La redondance protège d'une panne matérielle aléatoire, pas d'une erreur de logiciel :
       deux copies du même code tombent ensemble.
   - prompt: À quelle phase est né le problème ?
     answers:
-      - "Exigences : la trajectoire d'Ariane 5 n'y figurait pas, et une exigence d'Ariane 4 devenue inutile y restait"
       - "Déploiement : la mauvaise version du logiciel a été chargée"
       - "Exploitation : l'équipe au sol a réagi trop tard"
+      - "Exigences : la trajectoire d'Ariane 5 n'y figurait pas, et une exigence d'Ariane 4 devenue inutile y restait"
       - "Dépendances : une bibliothèque tierce était compromise"
-    correct: 1
+    correct: 3
     explanation: |
       Le logiciel a été repris d'Ariane 4 avec ses hypothèses. Les exigences de la centrale
       ne disaient rien de la trajectoire d'Ariane 5.
   - prompt: Quel test aurait le plus probablement révélé le défaut avant le vol ?
     answers:
-      - "Un test de charge du calculateur de bord"
       - "Une simulation du vol complet avec la vraie centrale et la trajectoire d'Ariane 5"
+      - "Un test de charge du calculateur de bord"
       - "Une relecture de l'orthographe des commentaires"
       - "Un test d'interface graphique"
-    correct: 2
+    correct: 1
     explanation: |
       Les simulations du vol utilisaient un modèle de la centrale. Avec la vraie centrale et
       les vraies données, la valeur trop grande serait apparue.

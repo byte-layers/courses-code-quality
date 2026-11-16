@@ -90,20 +90,20 @@ questions:
   - prompt: Qu'a provoqué la désinstallation du nouveau code sur les sept serveurs sains ?
     answers:
       - "Elle a arrêté l'incident"
-      - "Elle a réveillé Power Peg sur ces serveurs aussi, et aggravé l'incident"
       - "Elle n'a rien changé"
+      - "Elle a réveillé Power Peg sur ces serveurs aussi, et aggravé l'incident"
       - "Elle a remboursé les pertes"
-    correct: 2
+    correct: 3
     explanation: |
       Revenir en arrière n'est sûr que si l'ancienne version l'est. Ici, l'ancien code
       contenait encore Power Peg.
   - prompt: Quelle phase a déclenché l'incident le 1er août ?
     answers:
       - "Les exigences"
-      - "Le déploiement : une copie manuelle a oublié un serveur, sans vérification"
       - "Les dépendances"
       - "La conception de l'interface"
-    correct: 2
+      - "Le déploiement : une copie manuelle a oublié un serveur, sans vérification"
+    correct: 4
     explanation: |
       Le déploiement manuel, sans procédure écrite ni second technicien, a laissé l'ancien
       code sur un serveur.
@@ -120,10 +120,10 @@ questions:
   - prompt: Quelle pratique aurait le plus simplement évité l'incident ?
     answers:
       - "Ajouter des serveurs"
-      - "Supprimer le code mort de Power Peg, et déployer avec un outil qui vérifie la version sur chaque serveur"
       - "Envoyer plus de courriels d'erreur"
       - "Interdire les nouvelles fonctionnalités"
-    correct: 2
+      - "Supprimer le code mort de Power Peg, et déployer avec un outil qui vérifie la version sur chaque serveur"
+    correct: 4
     explanation: |
       Sans code mort, pas de Power Peg à réveiller ; avec un déploiement automatisé et
       vérifié, pas de serveur oublié.

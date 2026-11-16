@@ -94,20 +94,20 @@ questions:
   - prompt: Pourquoi les tests n'ont-ils pas détecté le défaut ?
     answers:
       - "Il n'y avait aucun test"
-      - "Les tests utilisaient un joker sur le 21e champ, si bien que l'interpréteur ne le lisait jamais"
       - "Les tests tournaient sur Linux"
+      - "Les tests utilisaient un joker sur le 21e champ, si bien que l'interpréteur ne le lisait jamais"
       - "Les tests avaient été désactivés pour aller plus vite"
-    correct: 2
+    correct: 3
     explanation: |
       Un test qui ne fait jamais lire le champ ne peut pas révéler un problème sur ce champ :
       il faut tester les cas limites.
   - prompt: À quelle phase est né le défaut ?
     answers:
       - "Exploitation, le 19 juillet"
-      - "Conception et codage, en février : 21 champs définis, 20 fournis, et pas de contrôle de bornes"
       - "Dépendances : une bibliothèque tierce compromise"
       - "Exigences : le client n'avait pas demandé de détection IPC"
-    correct: 2
+      - "Conception et codage, en février : 21 champs définis, 20 fournis, et pas de contrôle de bornes"
+    correct: 4
     explanation: |
       Le défaut existait depuis la version 7.11 du capteur. Il attendait une règle qui lise
       le 21e champ.

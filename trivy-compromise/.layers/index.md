@@ -83,31 +83,31 @@ submitMode: last-only
 questions:
   - prompt: Pourquoi un pipeline qui appelait `aquasecurity/trivy-action@0.28.0` a-t-il exécuté le code malveillant ?
     answers:
-      - "Il avait installé une mauvaise version par erreur"
       - "L'étiquette 0.28.0 avait été déplacée vers un commit malveillant ; le pipeline a reçu ce nouveau contenu sans rien voir"
+      - "Il avait installé une mauvaise version par erreur"
       - "GitHub avait remplacé l'action par une autre"
       - "Le pipeline avait désactivé les contrôles de sécurité"
-    correct: 2
+    correct: 1
     explanation: |
       Une étiquette Git est un pointeur. Avec les droits d'écriture, on la déplace vers un autre
       commit ; ceux qui l'appellent reçoivent le nouveau code.
   - prompt: Pourquoi les équipes n'ont-elles pas remarqué le vol ?
     answers:
       - "Le pipeline échouait, mais personne ne le lisait"
-      - "Le code malveillant s'exécutait avant le vrai scan, et le pipeline se terminait normalement"
       - "Le vol avait lieu la nuit"
+      - "Le code malveillant s'exécutait avant le vrai scan, et le pipeline se terminait normalement"
       - "Trivy était désactivé"
-    correct: 2
+    correct: 3
     explanation: |
       Le rapport de vulnérabilités était bien produit. Rien, dans le résultat du job,
       n'indiquait l'envoi des secrets.
   - prompt: Côté projet Trivy, quelle erreur a probablement permis l'attaque du 19 mars ?
     answers:
-      - "Une révocation incomplète après le premier incident : des identifiants restaient valides"
       - "Un mot de passe affiché dans la documentation"
+      - "Une révocation incomplète après le premier incident : des identifiants restaient valides"
       - "Une version de Go trop ancienne"
       - "L'absence de tests unitaires"
-    correct: 1
+    correct: 2
     explanation: |
       Après le premier incident, le renouvellement des identifiants n'a pas été complet. Les
       attaquants ont gardé un accès.
@@ -123,11 +123,11 @@ questions:
       et de la façon dont elle le désignait.
   - prompt: Quelle pratique protège le mieux d'une étiquette déplacée ?
     answers:
-      - "Appeler l'action par l'empreinte SHA complète d'un commit, et relire ses mises à jour"
       - "Utiliser l'étiquette `latest`"
+      - "Appeler l'action par l'empreinte SHA complète d'un commit, et relire ses mises à jour"
       - "Faire confiance au badge « Immutable »"
       - "Lancer le scan deux fois"
-    correct: 1
+    correct: 2
     explanation: |
       L'empreinte complète désigne un contenu unique. L'avis d'Aqua rappelle que des étiquettes
       empoisonnées portaient le badge « Immutable ».

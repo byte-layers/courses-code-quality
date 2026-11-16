@@ -117,10 +117,10 @@ questions:
   - prompt: Une fonction de 400 lignes, copiée en trois endroits, que personne n'ose modifier. Quelle caractéristique d'ISO 25010 est touchée ?
     answers:
       - "La fiabilité"
-      - "La maintenabilité"
       - "L'adéquation fonctionnelle"
       - "La flexibilité"
-    correct: 2
+      - "La maintenabilité"
+    correct: 4
     explanation: |
       Modularité, réutilisabilité, analysabilité et modifiabilité sont des sous-caractéristiques
       de la maintenabilité. Le code peut très bien marcher : c'est son évolution qui coûte.
@@ -156,11 +156,11 @@ questions:
       produit comprise, relève d'un autre cadre, comme ISO 25010.
   - prompt: À quoi ISO 25010 ne sert-il pas ?
     answers:
+      - "À certifier l'organisation qui développe le logiciel"
       - "À vérifier qu'une exigence n'oublie pas une dimension de la qualité"
       - "À classer un incident selon ce qu'il a touché"
       - "À choisir quoi mesurer dans un projet"
-      - "À certifier l'organisation qui développe le logiciel"
-    correct: 4
+    correct: 1
     explanation: |
       La norme décrit la qualité d'un produit. Certifier une organisation, par exemple sur sa
       gestion de la sécurité, relève d'autres normes comme ISO 27001.

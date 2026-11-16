@@ -85,40 +85,40 @@ questions:
   - prompt: Comment l'attaquant a-t-il pu modifier d'anciennes versions sans toucher au code d'origine ?
     answers:
       - "En piratant les serveurs de Packagist"
-      - "En supprimant les étiquettes Git et en les recréant, avec les mêmes noms, sur ses propres commits"
       - "En modifiant le framework Laravel officiel"
       - "En publiant un paquet au nom proche"
-    correct: 2
+      - "En supprimant les étiquettes Git et en les recréant, avec les mêmes noms, sur ses propres commits"
+    correct: 4
     explanation: |
       Packagist lit les versions dans les étiquettes Git. Recréer une étiquette sur un autre
       commit change le code derrière le même numéro de version.
   - prompt: Pourquoi le code malveillant s'exécutait-il sans que l'application appelle une fonction du paquet ?
     answers:
-      - "Il était déclaré dans `autoload.files`, que Composer charge à chaque exécution"
       - "Il remplaçait le fichier index.php"
+      - "Il était déclaré dans `autoload.files`, que Composer charge à chaque exécution"
       - "Il s'exécutait seulement dans les tests"
       - "Il demandait une confirmation à l'utilisateur"
-    correct: 1
+    correct: 2
     explanation: |
       Composer charge chaque fichier de `autoload.files` dès le démarrage de l'application :
       chaque requête, commande ou tâche de fond.
   - prompt: Pour une équipe qui utilise ces paquets, à quelle phase est né le problème ?
     answers:
       - "Exigences"
-      - "Dépendances : un paquet tiers, résolu par son numéro de version, a apporté un code malveillant"
       - "Codage de son application"
+      - "Dépendances : un paquet tiers, résolu par son numéro de version, a apporté un code malveillant"
       - "Conception de sa base de données"
-    correct: 2
+    correct: 3
     explanation: |
       L'équipe n'a écrit aucune ligne fautive. Le risque venait d'une dépendance, installée
       d'après un numéro de version dont le contenu avait changé.
   - prompt: Quelle commande résout à nouveau les versions, et peut donc récupérer une étiquette réécrite ?
     answers:
       - "`composer install` avec un `composer.lock` versionné"
-      - "`composer update`"
       - "`git status`"
       - "`php -v`"
-    correct: 2
+      - "`composer update`"
+    correct: 4
     explanation: |
       `composer install` suit le fichier de verrouillage, qui enregistre le commit exact.
       `composer update` cherche les versions à nouveau.

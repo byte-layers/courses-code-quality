@@ -117,51 +117,51 @@ submitMode: last-only
 questions:
   - prompt: Dans la métaphore de la dette technique, que sont les « intérêts » ?
     answers:
-      - "Le surcoût payé à chaque modification du code tant que la dette n'est pas remboursée"
       - "Le prix des licences des outils d'analyse"
       - "Le temps passé à écrire les tests"
+      - "Le surcoût payé à chaque modification du code tant que la dette n'est pas remboursée"
       - "Le salaire des développeurs"
-    correct: 1
+    correct: 3
     explanation: |
       Le capital est le travail pour remettre le code au propre ; les intérêts, le surcoût de
       chaque modification. D'où la priorité aux zones souvent modifiées.
   - prompt: Une équipe livre volontairement une version simplifiée pour tenir un salon, et note dans le registre la refonte à faire le mois suivant. Où se place cette dette dans le quadrant de Fowler ?
     answers:
       - "Délibérée et imprudente"
-      - "Par inadvertance et imprudente"
       - "Délibérée et prudente"
+      - "Par inadvertance et imprudente"
       - "Par inadvertance et prudente"
-    correct: 3
+    correct: 2
     explanation: |
       La dette est choisie, en connaissance de cause, avec un plan de remboursement : c'est
       la seule case qui correspond pleinement à la métaphore de Cunningham.
   - prompt: Après six mois de projet, l'équipe comprend enfin le métier et voit qu'une autre conception aurait été bien meilleure. De quelle dette s'agit-il ?
     answers:
-      - "Délibérée et imprudente"
       - "Par inadvertance et prudente"
+      - "Délibérée et imprudente"
       - "Ce n'est pas de la dette"
       - "Délibérée et prudente"
-    correct: 2
+    correct: 1
     explanation: |
       Personne n'a choisi cette dette, et personne n'a été négligent : c'est en construisant
       qu'on apprend. Elle est inévitable ; on prévoit du temps pour remanier.
   - prompt: Quelle dette les outils d'analyse de code mesurent-ils mal ?
     answers:
       - "La duplication"
-      - "La complexité des fonctions"
       - "La dette d'architecture et de documentation"
+      - "La complexité des fonctions"
       - "Les dépendances obsolètes"
-    correct: 3
+    correct: 2
     explanation: |
       Les outils voient le code ligne à ligne. Une architecture inadaptée ou une procédure
       d'installation fausse se suivent dans un registre de la dette.
   - prompt: Un module truffé de duplications n'a pas été modifié depuis trois ans et sera supprimé l'an prochain. Faut-il rembourser cette dette en priorité ?
     answers:
       - "Oui, toute dette doit être remboursée au plus vite"
-      - "Non : ses intérêts sont presque nuls, puisque personne ne le modifie ; on rembourse d'abord là où le code change souvent"
       - "Oui, car un outil d'analyse la signale"
+      - "Non : ses intérêts sont presque nuls, puisque personne ne le modifie ; on rembourse d'abord là où le code change souvent"
       - "Non, car la duplication n'est pas une dette"
-    correct: 2
+    correct: 3
     explanation: |
       Une dette coûte par ses intérêts, payés à chaque modification. Un code qu'on ne touche
       plus, et qui va disparaître, peut la garder.

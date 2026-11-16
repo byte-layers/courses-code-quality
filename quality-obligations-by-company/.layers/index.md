@@ -147,51 +147,51 @@ submitMode: last-only
 questions:
   - prompt: MédiSuivi ajoute une fonction qui propose une dose d'insuline. Quel texte devient applicable du fait de cette seule fonction ?
     answers:
-      - "Le règlement sur les dispositifs médicaux (MDR)"
       - "La directive sur l'accessibilité"
       - "DORA"
+      - "Le règlement sur les dispositifs médicaux (MDR)"
       - "La directive sur les équipements radio"
-    correct: 1
+    correct: 3
     explanation: |
       Un logiciel qui aide à une décision médicale devient un dispositif médical : marquage CE,
       évaluation clinique, et un cycle de développement traçable, souvent selon IEC 62304.
   - prompt: Sur quoi porte la certification HDS ?
     answers:
       - "Sur le code de l'application de santé"
-      - "Sur l'hébergeur des données de santé"
       - "Sur le médecin qui consulte les données"
       - "Sur l'accessibilité de l'application"
-    correct: 2
+      - "Sur l'hébergeur des données de santé"
+    correct: 4
     explanation: |
       Le Code de la santé publique impose que l'hébergeur de données de santé à caractère
       personnel soit certifié. L'éditeur choisit donc un hébergeur certifié.
   - prompt: Pourquoi le module de tri des candidatures de RHPilot change-t-il ses obligations ?
     answers:
-      - "Parce que tout logiciel RH doit être certifié ISO 27001"
       - "Parce que l'AI Act classe les systèmes d'IA utilisés pour le recrutement à haut risque"
+      - "Parce que tout logiciel RH doit être certifié ISO 27001"
       - "Parce que le recrutement relève de DORA"
       - "Parce qu'il collecte des données de santé"
-    correct: 2
+    correct: 1
     explanation: |
       Haut risque veut dire gestion des risques, qualité des données, documentation et contrôle
       humain. Dans le pipeline : tests de biais et décision finale humaine.
   - prompt: Quel contrôle de pipeline répond le mieux aux exigences du Cyber Resilience Act pour le thermostat de Thermia ?
     answers:
       - "Un test de contraste des couleurs"
-      - "Une SBOM produite à chaque version, pour savoir quels appareils une nouvelle faille touche"
       - "Un test de consentement aux cookies"
       - "Une revue clinique"
-    correct: 2
+      - "Une SBOM produite à chaque version, pour savoir quels appareils une nouvelle faille touche"
+    correct: 4
     explanation: |
       Le CRA impose de gérer les vulnérabilités pendant toute la durée de support : savoir ce
       que contient chaque version est la base.
   - prompt: Brindille confie le paiement à la page de son prestataire de paiement. Qu'y gagne-t-elle ?
     answers:
+      - "Elle ne voit jamais les numéros de carte, ce qui réduit au minimum son périmètre PCI DSS"
       - "Elle n'est plus soumise au RGPD"
       - "Elle échappe à l'obligation d'accessibilité"
-      - "Elle ne voit jamais les numéros de carte, ce qui réduit au minimum son périmètre PCI DSS"
       - "Elle n'a plus besoin d'authentification forte"
-    correct: 3
+    correct: 1
     explanation: |
       Les données de carte ne passent pas par ses serveurs. L'authentification forte reste
       exigée, mais c'est le prestataire qui la met en œuvre.

@@ -71,31 +71,31 @@ submitMode: last-only
 questions:
   - prompt: Pourquoi la suppression de la base par l'agent a-t-elle touché les vraies données ?
     answers:
-      - "L'agent avait volé un mot de passe"
       - "Les applications Replit utilisaient une seule base de données pour le développement et la production"
+      - "L'agent avait volé un mot de passe"
       - "Lemkin avait supprimé ses sauvegardes"
       - "La base était hébergée chez un autre fournisseur"
-    correct: 2
+    correct: 1
     explanation: |
       Sans séparation, une erreur pendant le développement touche directement les données des
       clients. C'est ce que Replit a corrigé ensuite.
   - prompt: Lemkin avait demandé un gel du code. Pourquoi cela n'a-t-il pas suffi ?
     answers:
       - "Il l'avait écrit dans la mauvaise langue"
-      - "Une consigne dans la conversation n'est pas une barrière technique : rien n'empêchait l'agent d'agir"
       - "L'agent était en panne"
       - "Le gel du code n'est pas une pratique reconnue"
-    correct: 2
+      - "Une consigne dans la conversation n'est pas une barrière technique : rien n'empêchait l'agent d'agir"
+    correct: 4
     explanation: |
       Un agent peut ignorer une consigne. Seule une barrière dans l'outil, une permission, un
       hook ou un accès en lecture seule, l'empêche vraiment d'agir.
   - prompt: À quelle phase est né le problème ?
     answers:
-      - "Dépendances : une bibliothèque compromise"
       - "Conception : l'environnement de l'agent ne séparait pas le développement de la production, et n'offrait aucun moyen d'imposer un gel"
+      - "Dépendances : une bibliothèque compromise"
       - "Déploiement : un serveur oublié"
       - "Exigences : Lemkin n'avait pas décrit son application"
-    correct: 2
+    correct: 1
     explanation: |
       L'agent s'est trompé, mais l'environnement lui permettait de détruire la production sans
       barrière. C'est là que le défaut est né.
@@ -111,11 +111,11 @@ questions:
       vérifie, comme le résultat d'un test.
   - prompt: Vous confiez une tâche à un agent de code sur votre projet. Quelle mesure suit la leçon de Replit ?
     answers:
-      - "Lui donner les accès à la base de production pour aller plus vite"
       - "Le faire travailler sur une branche et une base de développement, avec des permissions et des hooks qui bloquent les commandes destructrices"
+      - "Lui donner les accès à la base de production pour aller plus vite"
       - "Écrire « ne supprime rien » dans le prompt, et lui faire confiance"
       - "Désactiver les sauvegardes, qui ralentissent l'agent"
-    correct: 2
+    correct: 1
     explanation: |
       Des barrières techniques et un environnement séparé : l'agent peut se tromper sans que
       la production en paie le prix.

@@ -110,10 +110,10 @@ questions:
   - prompt: Quelle est la différence entre un règlement européen et une directive européenne ?
     answers:
       - "Le règlement est facultatif, la directive obligatoire"
-      - "Le règlement s'applique directement dans chaque pays ; la directive doit d'abord être transposée dans la loi de chaque pays"
       - "Aucune, ce sont deux noms du même texte"
+      - "Le règlement s'applique directement dans chaque pays ; la directive doit d'abord être transposée dans la loi de chaque pays"
       - "La directive ne concerne que les entreprises publiques"
-    correct: 2
+    correct: 3
     explanation: |
       Le RGPD, un règlement, s'applique tel quel. NIS2, une directive, n'a d'effet en France
       qu'une fois transposée par une loi française.
@@ -121,30 +121,30 @@ questions:
     answers:
       - "Oui, toujours, dès sa publication"
       - "Non, jamais"
-      - "Non, elle est d'application volontaire, sauf si un contrat ou un texte de loi y renvoie"
       - "Oui, mais seulement pour les entreprises certifiées"
-    correct: 3
+      - "Non, elle est d'application volontaire, sauf si un contrat ou un texte de loi y renvoie"
+    correct: 4
     explanation: |
       Une norme devient contraignante par le texte qui la cite : un contrat, un appel d'offres,
       une loi ou un règlement.
   - prompt: Depuis le 28 juin 2025, une boutique en ligne d'une PME française doit-elle se soucier d'accessibilité numérique ?
     answers:
       - "Non, l'accessibilité ne concerne que les sites publics"
-      - "Oui : la directive européenne sur l'accessibilité, transposée en France, couvre le commerce en ligne ; seules les microentreprises de services sont exemptées"
       - "Seulement si elle utilise le DSFR"
+      - "Oui : la directive européenne sur l'accessibilité, transposée en France, couvre le commerce en ligne ; seules les microentreprises de services sont exemptées"
       - "Seulement si elle est certifiée ISO 27001"
-    correct: 2
+    correct: 3
     explanation: |
       La directive (European Accessibility Act) étend l'obligation à de nombreux services privés,
       dont le commerce en ligne. En France, la vérification s'appuie sur la norme EN 301 549
       et sur le RGAA.
   - prompt: Un outil comme axe-core passe sans erreur dans la CI. Le site est-il conforme au RGAA ?
     answers:
-      - "Oui, l'outil vérifie tous les critères"
       - "Non : les outils automatiques ne trouvent qu'une partie des défauts, et l'audit RGAA reste manuel"
+      - "Oui, l'outil vérifie tous les critères"
       - "Oui, si le site utilise aussi le DSFR"
       - "Non, car axe-core ne sait tester que les applications mobiles"
-    correct: 2
+    correct: 1
     explanation: |
       Pertinence d'un texte alternatif, ordre de lecture, parcours au clavier : ces points
       demandent un humain. L'outil sert de filet entre deux audits.
