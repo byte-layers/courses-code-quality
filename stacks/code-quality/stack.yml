@@ -1,5 +1,5 @@
 title: "La qualité du logiciel, des normes au pipeline"
-description: "Partir de six incidents réels, nommer la qualité avec ISO 25010, connaître les normes et référentiels qui s'imposent en France, mesurer la dette technique, puis la contrôler dans un pipeline : sur un vrai projet, avec du code écrit par un agent d'IA."
+description: "Partir de six incidents réels, nommer la qualité avec ISO 25010, connaître les normes et référentiels qui s'imposent en France, mesurer la dette technique, la contrôler dans un pipeline et sécuriser la chaîne logicielle : sur un vrai projet, avec du code écrit par un agent d'IA."
 level: beginner
 tags: [quality]
 prerequisites: "Savoir utiliser un terminal et Git. Les labs reprennent le projet fil rouge du stack « Coder avec un agent d'IA »."
@@ -30,3 +30,12 @@ layers:
     summary: "Mesurer la dette avec des outils, choisir ses seuils, puis en faire une barrière"
     contents:
       - { slug: measure-debt }
+      - { slug: merge-request-quality-gate }
+      - { slug: code-analysis-tools }
+      - { slug: sonarqube-local }
+  - title: "Sécuriser la chaîne logicielle"
+    summary: "Dépendances, secrets et outils de build : les contrôler dans le pipeline, et reconnaître un paquet piégé"
+    contents:
+      - { slug: sast-sca-secrets, role: read-first }
+      - { slug: security-pipeline }
+      - { slug: typosquatting-challenge, role: proof }
