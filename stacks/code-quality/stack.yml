@@ -20,3 +20,7 @@ layers:
       - { slug: french-quality-frameworks }
       - { slug: quality-obligations-by-company }
       - { slug: technical-debt }
+  - title: "Relire et tester"
+    summary: "Juger le code d'un agent avec le vocabulaire du clean code, et vérifier que ses tests testent vraiment"
+    contents:
+      - { slug: clean-code-agent-diff }
