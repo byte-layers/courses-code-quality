@@ -22,7 +22,7 @@ La place de cette revue est à côté de la barrière, pas dedans. Une IA ne ré
 
 ## 05.3 - Sans les minutes de gitlab.com
 
-Si vos minutes de calcul gratuites sont épuisées, ou si votre code ne doit pas quitter votre réseau, un **runner** installé sur votre poste peut exécuter le même `.gitlab-ci.yml`, sans changer le fichier. Deux réglages sont nécessaires : le runner utilise l'exécuteur **Docker**, puisque les jobs demandent une image (`image:`), et les runners partagés sont désactivés pour le projet (**Settings**, **CI/CD**, **Runners**), pour que GitLab envoie les jobs au vôtre. Le bit [GitLab Runner](https://byte-layers.com/fr/bits/gitlab-runner) explique ce qu'est un runner et comment GitLab choisit celui qui exécute un job.
+Si vos minutes de calcul gratuites sont épuisées, ou si votre code ne doit pas quitter votre réseau, un **runner** installé sur votre poste peut exécuter les mêmes jobs. Le lab [Un runner GitLab sur son poste](https://byte-layers.com/fr/labs/gitlab-runner-local) le met en place : un runner dans Docker, avec l'exécuteur **Docker** puisque les jobs demandent une image (`image:`), enregistré sur votre projet, et les runners partagés coupés. Ce lab envoie les jobs au runner avec un tag ; pour garder ce pipeline tel quel, sans `tags:`, cochez **Run untagged jobs** à la création du runner. Le bit [Les runners : qui exécute vos pipelines](https://byte-layers.com/fr/bits/gitlab-runner) explique comment GitLab choisit le runner d'un job.
 
 La merge request du code de l'agent reste ouverte : fermez-la avec **Close merge request**, elle a rempli son rôle.
 

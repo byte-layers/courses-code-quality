@@ -21,7 +21,7 @@ Aucun outil ne voit tout. SonarQube apporte un tableau de bord, un historique et
 
 ## 05.2 - Et dans un pipeline ?
 
-Un SonarQube installé sur votre poste n'est joignable que depuis votre poste : les runners partagés de gitlab.com ne le voient pas. Pour l'utiliser dans un pipeline, il faut un runner installé sur la même machine, ou un SonarQube hébergé sur un serveur que les runners joignent. Il faut deux jobs : le premier lance les tests avec Node.js et garde le rapport de couverture en artefact, le second lance le scanner, dont l'image n'a pas Node.js. Le jeton est rangé dans une variable masquée du projet GitLab, nommée `SONAR_TOKEN` (**Settings**, **CI/CD**, **Variables**) ; si vous la marquez aussi *Protected*, elle n'est transmise qu'aux branches protégées.
+Un SonarQube installé sur votre poste n'est joignable que depuis votre poste : les runners partagés de gitlab.com ne le voient pas. Pour l'utiliser dans un pipeline, il faut un runner installé sur la même machine, comme celui du lab [Un runner GitLab sur son poste](https://byte-layers.com/fr/labs/gitlab-runner-local), ou un SonarQube hébergé sur un serveur que les runners joignent. Il faut deux jobs : le premier lance les tests avec Node.js et garde le rapport de couverture en artefact, le second lance le scanner, dont l'image n'a pas Node.js. Le jeton est rangé dans une variable masquée du projet GitLab, nommée `SONAR_TOKEN` (**Settings**, **CI/CD**, **Variables**) ; si vous la marquez aussi *Protected*, elle n'est transmise qu'aux branches protégées.
 
 ```yaml
 coverage:
@@ -45,7 +45,7 @@ sonarqube:
     - sonar-scanner -Dsonar.projectKey=todo-api -Dsonar.sources=src -Dsonar.tests=test -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info -Dsonar.qualitygate.wait=true
 ```
 
-Ce pipeline n'est pas à lancer ici : il suppose un runner local et un SonarQube joignable sous le nom `sonarqube`. `needs: [coverage]` attend le premier job et récupère son artefact ; `GIT_DEPTH: "0"` clone tout l'historique, dont SonarQube a besoin pour dater les lignes : dans un pipeline, plus besoin de `sonar.scm.disabled`.
+Ce pipeline n'est pas à lancer ici : il suppose un runner local et un SonarQube joignable sous le nom `sonarqube`. Avec le runner du lab cité plus haut, ce nom n'est connu que si les conteneurs des jobs rejoignent le réseau Docker `sonarqube-lab` : la ligne `network_mode = "sonarqube-lab"`, dans la section `[runners.docker]` de la configuration du runner, le demande. `needs: [coverage]` attend le premier job et récupère son artefact ; `GIT_DEPTH: "0"` clone tout l'historique, dont SonarQube a besoin pour dater les lignes : dans un pipeline, plus besoin de `sonar.scm.disabled`.
 
 ## 05.3 - Ranger
 

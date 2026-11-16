@@ -122,11 +122,13 @@ Les textes de la qualité ne s'appliquent pas tous à tout le monde. Une même �
 | Constat | Exemple |
 |---|---|
 | le RGPD concerne presque tout le monde | les six entreprises traitent des données personnelles |
-| une nouvelle fonction peut changer de catégorie | la dose d'insuline fait de MédiSuivi un fabricant de dispositif médical ; le tri des candidatures place RHPilot dans l'IA à haut risque |
+| une nouvelle fonction peut faire changer l'entreprise de catégorie | la dose d'insuline fait de MédiSuivi un fabricant de dispositif médical ; le tri des candidatures place RHPilot dans l'IA à haut risque |
 | une certification est souvent exigée par le client, pas par la loi | ISO 27001 chez RHPilot et InfraSoin |
 | chaque texte se traduit en contrôles dans le pipeline | tests d'isolement, SBOM, analyse des dépendances, tests d'accessibilité, procédure d'incident |
 
 C'est le lien entre les normes et le travail quotidien : savoir quels textes s'appliquent dit **quels contrôles** mettre dans la CI, et **lesquels** garder pour un humain.
+
+Pour vous entraîner sur une entreprise que vous n'avez pas encore vue, le challenge [La septième entreprise](https://byte-layers.com/fr/challenges/quality-obligations-challenge) vous fait trancher ces trois questions vous-même : les textes, la fonction qui change de catégorie, les contrôles.
 
 ## Récap
 
