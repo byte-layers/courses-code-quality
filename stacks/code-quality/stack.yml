@@ -1,0 +1,13 @@
+title: "La qualité du logiciel, des normes au pipeline"
+description: "Nommer la qualité avec ISO 25010, connaître les normes et référentiels qui s'imposent en France, mesurer la dette technique, puis la contrôler dans un pipeline : sur un vrai projet, avec du code écrit par un agent d'IA."
+level: beginner
+tags: [quality]
+prerequisites: "Savoir utiliser un terminal et Git. Les labs reprennent le projet fil rouge du stack « Coder avec un agent d'IA »."
+layers:
+  - title: "Comprendre"
+    summary: "Le vocabulaire de la qualité, et les textes qui l'imposent"
+    contents:
+      - { slug: iso-25010-quality-model, role: read-first }
+      - { slug: french-quality-frameworks }
+      - { slug: quality-obligations-by-company }
+      - { slug: technical-debt }
