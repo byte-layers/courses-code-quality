@@ -1,9 +1,18 @@
 title: "La qualité du logiciel, des normes au pipeline"
-description: "Nommer la qualité avec ISO 25010, connaître les normes et référentiels qui s'imposent en France, mesurer la dette technique, puis la contrôler dans un pipeline : sur un vrai projet, avec du code écrit par un agent d'IA."
+description: "Partir de six incidents réels, nommer la qualité avec ISO 25010, connaître les normes et référentiels qui s'imposent en France, mesurer la dette technique, puis la contrôler dans un pipeline : sur un vrai projet, avec du code écrit par un agent d'IA."
 level: beginner
 tags: [quality]
 prerequisites: "Savoir utiliser un terminal et Git. Les labs reprennent le projet fil rouge du stack « Coder avec un agent d'IA »."
 layers:
+  - title: "Apprendre des incidents"
+    summary: "Six pannes et attaques réelles, et la phase où chacune est née"
+    contents:
+      - { slug: ariane-5-failure, role: read-first }
+      - { slug: knight-capital-failure }
+      - { slug: crowdstrike-outage }
+      - { slug: trivy-compromise }
+      - { slug: laravel-lang-compromise }
+      - { slug: replit-agent-incident }
   - title: "Comprendre"
     summary: "Le vocabulaire de la qualité, et les textes qui l'imposent"
     contents:
