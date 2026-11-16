@@ -26,3 +26,7 @@ layers:
       - { slug: clean-code-agent-diff }
       - { slug: tests-and-quality }
       - { slug: mutation-testing }
+  - title: "Mesurer et contrôler"
+    summary: "Mesurer la dette avec des outils, choisir ses seuils, puis en faire une barrière"
+    contents:
+      - { slug: measure-debt }
